@@ -1,0 +1,28 @@
+mixin type(name,img,count,active = false)
+  if active
+    a(href="#").type.type-active
+      .type-img
+        +icon(img)
+      .type-name
+        span=name
+      .type-count
+        span=count
+  else
+    a(href="#").type
+      .type-img
+        +icon(img)
+      .type-name
+        span=name
+      .type-count
+        span=count
+
+.catalog-types
+  .swiper.type-swiper
+    .swiper-wrapper.type-swiper-wrapper
+      each jj in [{name: 'Гостиные',img: 'Гостиные'},{name: 'Комоды',img: 'Комоды'},{name: 'Полки',img: 'Полки'},{name: 'Столики',img: 'Столики'},{name: 'Тумбы',img: 'Тумбы'},{name: 'Тумбы под ТВ',img: 'ТумбыподТВ'},{name: 'Шкафы',img: 'Шкафы'},{name: 'Кресла-качалки',img: 'Кресла-качалки'},{name: 'Камины',img: 'Камины'},{name: 'Зеркала',img: 'Зеркала'}]
+        .swiper-slide.type-slide
+          if jj.name == 'Гостиные'
+            +type(jj.name,jj.img,'21',true)
+          else
+            +type(jj.name,jj.img,'21')
+  .type-progressbar.swiper-pagination

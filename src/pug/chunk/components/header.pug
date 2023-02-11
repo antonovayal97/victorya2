@@ -1,0 +1,77 @@
+header
+  .header-with-line
+    .top-header
+      .top-header-first
+        a(href="./").logo
+          include ../../../static/img/logo.svg
+        .links
+          ul
+            each val in ['Контакты', 'Мебель на заказ', 'Доставка в улус']
+              li
+                a(href="#")=val
+      .top-header-second
+        .contact
+          span Якутск +7(4112) 40-11-11
+        .top-header-icons
+          a(href="#")
+            .icon-link.search-link
+              +icon('search')
+          a(href="#")
+            .icon-link.account-link
+              +icon('user')
+          a(href="./cart.html")
+            .icon-link.cart-link
+              .icon-link-circle
+                span 2
+              +icon('cart')
+          .icon-link.menu-link
+            +icon('menubtn')
+  .header-with-line
+    .bottom-header
+      .header-menu
+        ul
+          each link in ['Мягкая мебель','Прихожая','Гостинная','Кухня','Спальня','Детская мебель','Шкафы и комоды','Офисная мебель','Акции']
+            li
+              a(href="#")=link
+  .menu-slided
+    .menu-slided-search
+      input(type="text" placeholder="Поиск")
+      .level-btn.menu-close
+        +icon('closemenu')
+    .menu-slided-items
+      ul
+        li
+          a(href="#") Контакты
+        li
+          a(href="#") Мебель на заказ
+        li
+          a(href="#") Доставка в улусы
+    ul.menu-slided-ul
+      each menuslide in [{name: 'Мягкая мебель'},{name: 'Прихожая'},{name: 'Гостиная'},{name: 'Кухня'},{name: 'Спальня'},{name: 'Детская мебель'},{name: 'Шкафы и комоды'},{name: 'Офисная мебель'},{name: 'Акции'}]
+        li(id=menuslide).first-level
+          .first-level-name
+            span=menuslide.name
+            .level-name-icon
+              +icon('arrowmenuright')
+          .second-level
+            .second-level-header
+              .level-btn.back-to-first
+                +icon('circlearrow')
+              .level-btn.menu-close
+                +icon('closemenu')
+            a(href="#").second-level-name
+              span=menuslide.name
+              .level-name-icon
+                +icon('arrowmenuright')
+            ul.menu-slided-ul
+              each jj in [1,2,3,4,5,6,7,8,9,10]
+                li
+                  a(href="#").second-level-items
+                    span=menuslide.name + jj
+                    .level-name-icon
+                      +icon('arrowmenuright')
+    .menu-slided-account-link
+      .first-level-name
+        span Личный кабинет
+        .first-level-name-icon
+          +icon('arrowmenuright')
