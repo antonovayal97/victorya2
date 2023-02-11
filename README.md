@@ -1,6 +1,6 @@
 через гит:
 1. git clone https://github.com/antonovayal97/victorya2
-2. cd Gulp4-PUG-SASS/aan_build
+2. cd ....
 Далее:
 0. Установка node.
 1. Глобально:
