@@ -1,5 +1,5 @@
 через гит:
-1. git clone https://github.com/iuan95/Gulp4-PUG-SASS
+1. git clone https://github.com/antonovayal97/victorya2
 2. cd Gulp4-PUG-SASS/aan_build
 Далее:
 0. Установка node.
